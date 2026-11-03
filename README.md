@@ -24,8 +24,6 @@
 | 🎨 Wireframe en Figma | **https://www.figma.com/design/7mvplyeryBmAuFO9Ai2zYG/Untitled?t=OJoWFxhyyeisMcYG-1** |
 | 💻 Repositorio en GitHub | **https://github.com/Ann-Lizarazo/Task_Planner.git** |
 
-> ⚠️ Recuerda que el link de Trello y el de Figma deben tener permisos de **visualización pública** (o "cualquiera con el enlace") para que el evaluador pueda abrirlos.
-
 ---
 
 ## 📑 Tabla de contenido
@@ -69,8 +67,6 @@ Cada sprint agrega nuevas funcionalidades y tecnologías hasta obtener una aplic
 | **Backend** | Java, Spring Boot, persistencia de datos, base de datos SQL, operaciones CRUD |
 | **Integración** | Conexión entre frontend y backend para una aplicación completamente funcional |
 
-> En esta primera etapa el alcance se limita a la **interfaz de usuario** (HTML5 + Bootstrap). Aún **no** se implementa lógica de negocio con JavaScript, salvo la validación de entradas del formulario.
-
 ## 🛠 Tecnologías
 
 | Tecnología | Uso |
@@ -84,7 +80,7 @@ Cada sprint agrega nuevas funcionalidades y tecnologías hasta obtener una aplic
 
 ## 🗂 Planificación
 
-La planificación de los sprints, sus tareas, estados y criterios de finalización se gestionan en el **tablero de Trello** del proyecto (ver [enlaces](#-https://trello.com/b/nzfNSjj8/taskplanner)).
+La planificación de los sprints, sus tareas, estados y criterios de finalización se gestionan en el **tablero de Trello** del proyecto (ver [enlaces](#-https://trello.com/b/nzfNSjj8/taskplanner).
 
 | Backlog | Por hacer | En proceso | Finalizado |
 |---|---|---|---|
