@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Planificador de Tareas</title>
+    <title>Task Planner</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -29,7 +28,13 @@
                 </p>
             </div>
 
-            <button type="button" class="btn btn-primary">
+            <button
+                type="button"
+                class="btn btn-primary"
+                id="newTaskButton"
+                data-bs-toggle="modal"
+                data-bs-target="#newTaskModal"
+            >
                 Nueva tarea
             </button>
         </header>
@@ -89,7 +94,7 @@
                             </h3>
 
                             <p class="card-text">
-                                Realizar la conección de las Apis.
+                                Realizar la conexión de las APIs.
                             </p>
 
                             <p>
@@ -129,7 +134,7 @@
 
                             <p class="mb-0">
                                 <strong>Estado:</strong>
-                                <span class="badge text-bg-success">
+                                <span class="badge text-bg-info">
                                     En progreso
                                 </span>
                             </p>
@@ -202,6 +207,93 @@
         </section>
 
     </main>
+
+    <!-- Modal: formulario de nueva tarea -->
+    <div
+        class="modal fade"
+        id="newTaskModal"
+        tabindex="-1"
+        aria-labelledby="newTaskModalLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- novalidate: desactiva los mensajes del navegador para usar nuestra validación -->
+                <form id="newTaskForm" novalidate>
+
+                    <div class="modal-header">
+                        <h2 class="modal-title h5" id="newTaskModalLabel">Nueva tarea</h2>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Cerrar"
+                        ></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <!-- Alerta de error (oculta al inicio) -->
+                        <div id="formAlert" class="alert alert-danger d-none" role="alert"></div>
+
+                        <div class="mb-3">
+                            <label for="newTaskNameInput" class="form-label">Nombre</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="newTaskNameInput"
+                                placeholder="Ej. Diseñar la interfaz"
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="newTaskDescriptionInput" class="form-label">Descripción</label>
+                            <textarea
+                                class="form-control"
+                                id="newTaskDescriptionInput"
+                                rows="3"
+                                placeholder="Describe brevemente la tarea"
+                            ></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="newTaskDueDateInput" class="form-label">Fecha de entrega</label>
+                            <input type="date" class="form-control" id="newTaskDueDateInput">
+                        </div>
+
+                        <div class="mb-0">
+                            <label for="newTaskStatusSelect" class="form-label">Estado</label>
+                            <select class="form-select" id="newTaskStatusSelect">
+                                <option value="" selected>Selecciona una opción</option>
+                                <option value="pendiente">Pendiente</option>
+                                <option value="en-progreso">En progreso</option>
+                                <option value="completada">Completada</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                            Cancelar
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            Guardar tarea
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (necesario para que el modal funcione) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript propio (siempre al final del body) -->
+    <script src="app.js"></script>
 
 </body>
 
