@@ -85,7 +85,6 @@ newTaskForm.addEventListener('submit', function (event) {
         // Datos válidos: ocultar la alerta y cerrar el modal
         hideError();
         console.log('Formulario válido:', data);
-        // En sprints siguientes aquí se creará la tarjeta de la nueva tarea
         newTaskModal.hide();
     }
 });
